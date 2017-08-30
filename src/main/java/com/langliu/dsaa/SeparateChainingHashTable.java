@@ -134,6 +134,7 @@ public class SeparateChainingHashTable<AnyType>
     {
         int hashVal = x.hashCode( );
 
+        // 求余运算  IEEE标准是则是r=a-n\times\text{round}\left(a/n\right) ，
         hashVal %= theLists.length;
         if( hashVal < 0 )
             hashVal += theLists.length;
